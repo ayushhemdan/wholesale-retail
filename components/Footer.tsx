@@ -68,6 +68,28 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Rashmi Traders. All rights reserved.</p>
+          <div className="mt-4 text-sm">
+            <p>
+              Website designed & developed by <span className="font-semibold text-white">Ayush Hemdan</span>
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-2">
+              <a
+                href="tel:+918057842292"
+                className="text-gray-400 hover:text-white transition-colors flex items-center space-x-1"
+              >
+                <span>📞</span>
+                <span>+91-8057842292</span>
+              </a>
+              <span className="text-gray-600">|</span>
+              <a
+                href="mailto:ayush.hemdan04@email.com"
+                className="text-gray-400 hover:text-white transition-colors flex items-center space-x-1"
+              >
+                <span>✉️</span>
+                <span>ayush.hemdan04@email.com</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

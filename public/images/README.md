@@ -9,3 +9,4 @@ Please place your store images in this folder:
 
 You can name them as you prefer, just update the references in `app/page.tsx`.
 
+

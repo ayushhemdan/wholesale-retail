@@ -31,3 +31,4 @@ If you prefer to host images online (Cloudinary, Imgur, etc.):
 
 Right now, the website will show placeholder images until you add your store images. The placeholders are grocery store images that match the theme.
 
+

@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import ProductCard from '@/components/ProductCard';
-import SafeImage from '@/components/SafeImage';
-import * as dbHelper from '@/lib/db-helper';
+import Link from "next/link";
+import ProductCard from "@/components/ProductCard";
+import SafeImage from "@/components/SafeImage";
+import * as dbHelper from "@/lib/db-helper";
 
-const PHONE_NUMBER = '+919761396049'; // Update with your phone number
-const WHATSAPP_NUMBER = '+919761396049'; // Update with your WhatsApp number
+const PHONE_NUMBER = "+919761396049"; // Update with your phone number
+const WHATSAPP_NUMBER = "+919761396049"; // Update with your WhatsApp number
 
 export default async function Home() {
   const products = await dbHelper.getAllProducts();
@@ -41,7 +41,8 @@ export default async function Home() {
               Trusted Retail & Wholesale Supplier
             </p>
             <p className="text-lg md:text-2xl mb-12 max-w-3xl mx-auto text-white/90 animate-slide-up">
-              🎯 Quality products at unbeatable prices. Serving thousands of satisfied customers with excellence and dedication.
+              🎯 Quality products at unbeatable prices. Serving thousands of satisfied customers with excellence and
+              dedication.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-zoom-in">
               <Link
@@ -58,7 +59,7 @@ export default async function Home() {
                 📞 Call Now
               </a>
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g, '')}`}
+                href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-green-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all transform hover:scale-110 shadow-2xl hover:shadow-green-400/50"
@@ -101,22 +102,52 @@ export default async function Home() {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-4 animate-slide-up">
-              Our Showcase
-            </h2>
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-4 animate-slide-up">Our Showcase</h2>
             <div className="w-32 h-2 bg-gradient-to-r from-primary-600 to-pink-600 mx-auto mb-4 rounded-full"></div>
             <p className="text-xl text-gray-600">Explore our amazing product range</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { name: 'Biscuits & Snacks', img: 'https://drive.google.com/uc?export=view&id=1IZmBn4-exEWvxcqAFAb-8IulJ1S63t6B', fallback: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&h=400&fit=crop' },
-              { name: 'Rice & Pulses', img: 'https://drive.google.com/uc?export=view&id=1BaQ0cunua_T2p5xQgUL_GxJAxtIQQM4u', fallback: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop' },
-              { name: 'Cooking Oil', img: 'https://drive.google.com/uc?export=view&id=1BaQ0cunua_T2p5xQgUL_GxJAxtIQQM4u', fallback: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop' },
-              { name: 'Spices & Masala', img: 'https://drive.google.com/uc?export=view&id=1IZmBn4-exEWvxcqAFAb-8IulJ1S63t6B', fallback: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=400&fit=crop' },
-              { name: 'Namkeen', img: 'https://drive.google.com/uc?export=view&id=1IZmBn4-exEWvxcqAFAb-8IulJ1S63t6B', fallback: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=400&fit=crop' },
-              { name: 'Soap & Shampoo', img: 'https://drive.google.com/uc?export=view&id=1ek2BkM48tg7yxAU-fmDwnD7M2lwN45ML', fallback: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop' },
-              { name: 'Detergents', img: 'https://drive.google.com/uc?export=view&id=1ek2BkM48tg7yxAU-fmDwnD7M2lwN45ML', fallback: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop' },
-              { name: 'Household Items', img: 'https://drive.google.com/uc?export=view&id=1ek2BkM48tg7yxAU-fmDwnD7M2lwN45ML', fallback: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400&h=400&fit=crop' },
+              {
+                name: "Spices & Masala",
+                img: "/images/img5.png",
+                fallback: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Biscuits & Snacks",
+                img: "/images/img6.png",
+                fallback: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Rice & Pulses",
+                img: "/images/img7.png",
+                fallback: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Cooking Oil",
+                img: "/images/img8.png",
+                fallback: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Namkeen",
+                img: "/images/img9.png",
+                fallback: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Soap & Shampoo",
+                img: "/images/img10.png",
+                fallback: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Detergents",
+                img: "/images/img11.png",
+                fallback: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
+              },
+              {
+                name: "Household Items",
+                img: "/images/img12.png",
+                fallback: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=400&h=400&fit=crop",
+              },
             ].map((item, i) => (
               <div
                 key={i}
@@ -141,14 +172,19 @@ export default async function Home() {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 left-20 text-9xl animate-spin-slow">🛒</div>
-          <div className="absolute bottom-20 right-20 text-9xl animate-spin-slow" style={{ animationDirection: 'reverse' }}>💰</div>
+          <div
+            className="absolute bottom-20 right-20 text-9xl animate-spin-slow"
+            style={{ animationDirection: "reverse" }}
+          >
+            💰
+          </div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-left">
               <div className="relative">
                 <SafeImage
-                  src="https://drive.google.com/uc?export=view&id=1b3vVwclLCliORSGubtEOqJiTxsLguHlU"
+                  src="/images/main.jpeg"
                   alt="Rashmi Traders Store Interior"
                   className="rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                   fallbackSrc="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop"
@@ -165,20 +201,24 @@ export default async function Home() {
               </h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  🎯 Welcome to <strong>Rashmi Traders</strong>, your premier destination for quality retail and wholesale products. 
-                  We've been serving customers with excellence for over 2 years, building trust one transaction at a time.
+                  🎯 Welcome to <strong>Rashmi Traders</strong>, your premier destination for quality retail and
+                  wholesale products. We've been serving customers with excellence for over 2 years, building trust one
+                  transaction at a time.
                 </p>
                 <p>
-                  ✨ Our mission is simple: provide the <strong>best quality products</strong> at the <strong>most competitive prices</strong> 
+                  ✨ Our mission is simple: provide the <strong>best quality products</strong> at the{" "}
+                  <strong>most competitive prices</strong>
                   while delivering exceptional customer service that goes above and beyond.
                 </p>
                 <p>
-                  🚀 With thousands of products in stock and a team dedicated to your satisfaction, we're here to make 
+                  🚀 With thousands of products in stock and a team dedicated to your satisfaction, we're here to make
                   your shopping experience seamless and enjoyable.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-4">
-                <div className="bg-primary-100 px-6 py-3 rounded-full font-semibold text-primary-700">✓ Quality Assured</div>
+                <div className="bg-primary-100 px-6 py-3 rounded-full font-semibold text-primary-700">
+                  ✓ Quality Assured
+                </div>
                 <div className="bg-green-100 px-6 py-3 rounded-full font-semibold text-green-700">✓ Fast Delivery</div>
                 <div className="bg-yellow-100 px-6 py-3 rounded-full font-semibold text-yellow-700">✓ Best Prices</div>
               </div>
@@ -205,22 +245,46 @@ export default async function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: '⭐', title: 'Quality Products', desc: 'We source only the finest products, ensuring quality and durability in every item we offer.', color: 'from-yellow-400 to-orange-500' },
-              { icon: '💰', title: 'Best Pricing', desc: 'Competitive prices that give you the best value for your money without hidden costs.', color: 'from-green-400 to-emerald-500' },
-              { icon: '🤝', title: 'Trusted Service', desc: 'Reliable service and support. We\'re here to help you every step of the way.', color: 'from-blue-400 to-cyan-500' },
-              { icon: '🚀', title: 'Fast Delivery', desc: 'Quick and reliable delivery service to get your products to you as fast as possible.', color: 'from-purple-400 to-pink-500' },
+              {
+                icon: "⭐",
+                title: "Quality Products",
+                desc: "We source only the finest products, ensuring quality and durability in every item we offer.",
+                color: "from-yellow-400 to-orange-500",
+              },
+              {
+                icon: "💰",
+                title: "Best Pricing",
+                desc: "Competitive prices that give you the best value for your money without hidden costs.",
+                color: "from-green-400 to-emerald-500",
+              },
+              {
+                icon: "🤝",
+                title: "Trusted Service",
+                desc: "Reliable service and support. We're here to help you every step of the way.",
+                color: "from-blue-400 to-cyan-500",
+              },
+              {
+                icon: "🚀",
+                title: "Fast Delivery",
+                desc: "Quick and reliable delivery service to get your products to you as fast as possible.",
+                color: "from-purple-400 to-pink-500",
+              },
             ].map((feature, index) => (
               <div
                 key={index}
                 className="bg-white p-8 rounded-3xl shadow-xl text-center hover:shadow-2xl transition-all transform hover:scale-105 hover:-translate-y-2 group border-2 border-transparent hover:border-primary-300 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`text-7xl mb-4 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-300`}>
+                <div
+                  className={`text-7xl mb-4 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-300`}
+                >
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
-                <div className={`mt-6 h-1 bg-gradient-to-r ${feature.color} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}></div>
+                <div
+                  className={`mt-6 h-1 bg-gradient-to-r ${feature.color} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300`}
+                ></div>
               </div>
             ))}
           </div>
@@ -238,9 +302,24 @@ export default async function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: '🏪', title: 'Retail Sales', desc: 'Walk-in customers welcome! Browse our extensive collection in-store.', image: 'https://drive.google.com/uc?export=view&id=1IZmBn4-exEWvxcqAFAb-8IulJ1S63t6B' },
-              { icon: '📦', title: 'Wholesale', desc: 'Bulk orders for businesses. Special pricing for wholesale customers.', image: 'https://drive.google.com/uc?export=view&id=1b3vVwclLCliORSGubtEOqJiTxsLguHlU' },
-              { icon: '🚚', title: 'Delivery', desc: 'Fast and reliable delivery service to your doorstep.', image: 'https://drive.google.com/uc?export=view&id=1BaQ0cunua_T2p5xQgUL_GxJAxtIQQM4u' },
+              {
+                icon: "🏪",
+                title: "Retail Sales",
+                desc: "Walk-in customers welcome! Browse our extensive collection in-store.",
+                image: "/images/img1.jpeg",
+              },
+              {
+                icon: "📦",
+                title: "Wholesale",
+                desc: "Bulk orders for businesses. Special pricing for wholesale customers.",
+                image: "/images/img2.jpeg",
+              },
+              {
+                icon: "🚚",
+                title: "Delivery",
+                desc: "Fast and reliable delivery service to your doorstep.",
+                image: "/images/img3.jpeg",
+              },
             ].map((service, index) => (
               <div
                 key={index}
@@ -251,7 +330,13 @@ export default async function Home() {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500"
-                    fallbackSrc={index === 0 ? 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop' : index === 1 ? 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop' : 'https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=600&h=400&fit=crop'}
+                    fallbackSrc={
+                      index === 0
+                        ? "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop"
+                        : index === 1
+                        ? "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop"
+                        : "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=600&h=400&fit=crop"
+                    }
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -292,15 +377,12 @@ export default async function Home() {
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '01', icon: '🔍', title: 'Browse', desc: 'Explore our wide range of products' },
-              { step: '02', icon: '💬', title: 'Enquire', desc: 'Contact us via WhatsApp or Call' },
-              { step: '03', icon: '✅', title: 'Confirm', desc: 'We confirm your order details' },
-              { step: '04', icon: '📦', title: 'Receive', desc: 'Get your products delivered' },
+              { step: "01", icon: "🔍", title: "Browse", desc: "Explore our wide range of products" },
+              { step: "02", icon: "💬", title: "Enquire", desc: "Contact us via WhatsApp or Call" },
+              { step: "03", icon: "✅", title: "Confirm", desc: "We confirm your order details" },
+              { step: "04", icon: "📦", title: "Receive", desc: "Get your products delivered" },
             ].map((item, index) => (
-              <div
-                key={index}
-                className="text-center group relative"
-              >
+              <div key={index} className="text-center group relative">
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-white/20 rounded-full blur-xl group-hover:blur-2xl transition-all"></div>
                   <div className="relative bg-gradient-to-br from-primary-500 to-purple-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto text-4xl transform group-hover:scale-110 group-hover:rotate-12 transition-all shadow-2xl">
@@ -334,9 +416,24 @@ export default async function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: 'Sarah Johnson', role: 'Business Owner', text: 'Amazing quality and service! Best prices in town. Highly recommended!', rating: 5 },
-              { name: 'Mike Chen', role: 'Retailer', text: 'Fast delivery and excellent customer support. My go-to supplier!', rating: 5 },
-              { name: 'Emily Davis', role: 'Customer', text: 'Great variety of products. Always satisfied with my purchases!', rating: 5 },
+              {
+                name: "Sarah Johnson",
+                role: "Business Owner",
+                text: "Amazing quality and service! Best prices in town. Highly recommended!",
+                rating: 5,
+              },
+              {
+                name: "Mike Chen",
+                role: "Retailer",
+                text: "Fast delivery and excellent customer support. My go-to supplier!",
+                rating: 5,
+              },
+              {
+                name: "Emily Davis",
+                role: "Customer",
+                text: "Great variety of products. Always satisfied with my purchases!",
+                rating: 5,
+              },
             ].map((testimonial, index) => (
               <div
                 key={index}
@@ -344,7 +441,9 @@ export default async function Home() {
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-2xl text-yellow-400">⭐</span>
+                    <span key={i} className="text-2xl text-yellow-400">
+                      ⭐
+                    </span>
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 text-lg leading-relaxed italic">"{testimonial.text}"</p>
@@ -376,11 +475,7 @@ export default async function Home() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredProducts.map((product, index) => (
-                <div
-                  key={product._id}
-                  className="animate-slide-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+                <div key={product._id} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   <ProductCard
                     id={product._id}
                     name={product.name}
@@ -412,9 +507,7 @@ export default async function Home() {
           <div className="absolute top-1/2 left-1/2 text-8xl animate-pulse-slow">✨</div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-black mb-6 animate-slide-up">
-            Ready to Get Started?
-          </h2>
+          <h2 className="text-4xl md:text-6xl font-black mb-6 animate-slide-up">Ready to Get Started?</h2>
           <p className="text-2xl mb-12 text-white/90 max-w-2xl mx-auto animate-slide-up">
             Contact us today for inquiries, quotes, or to place an order. We're here to help!
           </p>
@@ -429,7 +522,7 @@ export default async function Home() {
               </span>
             </a>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g, '')}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER.replace(/[^0-9]/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-green-500 text-white px-10 py-4 rounded-full font-black text-lg hover:bg-green-600 transition-all transform hover:scale-110 shadow-2xl hover:shadow-green-400/50 flex items-center gap-2"
